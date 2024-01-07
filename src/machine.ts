@@ -16,13 +16,13 @@ export const windows = createMachine(
         },
         states: {
           ok: {
-            initial: "notShuttingDown",
+            initial: "running",
             after: {
               BLUE_SCREEN_DELAY: "#windows.on.blueScreen",
             },
             states: {
-              notShuttingDown: {
-                initial: "sleep",
+              running: {
+                initial: "active",
                 on: {
                   SHUT_DOWN: {
                     target: "#windows.on.ok.shuttingDown",

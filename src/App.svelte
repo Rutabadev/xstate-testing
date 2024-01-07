@@ -18,6 +18,10 @@
       message: "aïe aïe aïe 😵",
       condition: $windowsService.value?.["on"] === "blueScreen",
     },
+    {
+      message: "ron piche ron piche 😴",
+      condition: $windowsService.value?.["on"]?.["ok"]?.["running"] === "sleep",
+    },
   ];
 </script>
 
